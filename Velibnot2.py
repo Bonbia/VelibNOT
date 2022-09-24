@@ -9,7 +9,7 @@ from pywebio.session import *
 import time
 
 def aaa():
-    access_token = "o.kJMgB1V2ThtOcETPZEbsxQ3NpLCZQ75h"
+    access_token = "#YOUR PUSHBULLET ACCES TOKEN"
     pb = PushBullet(access_token)
 
    
@@ -20,7 +20,7 @@ def aaa():
 
     def stat(n):
         for i in range (n):
-            if packages_json['data']['stations'][i]['stationCode']=="1021":
+            if packages_json['data']['stations'][i]['stationCode']=="#TON CODE DE STATION":
                return(packages_json['data']['stations'][i]['num_bikes_available_types'][0]['mechanical'])
 
     titre= 'Nombre de Velib mecanique:'
@@ -31,7 +31,7 @@ def aaa():
 while(True):
     curr = time.time()
     obj = time.localtime(curr)
-    if obj.tm_hour==19 and obj.tm_min >=30 :
+    if obj.tm_hour==19 and obj.tm_min >=30 : #LE TEMPS QUE TU VEUX
         aaa()
         print(obj.tm_hour,obj.tm_min)
         time.sleep(10)
